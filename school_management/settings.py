@@ -111,6 +111,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
+AUTH_USER_MODEL="student_management.CustomUser"
+AUTHENTICATION_BACKENDS=['student_management.EmailBackEnd.EmailBackEnd']
 
 STATIC_URL = '/static/'
 STATIC_ROOT =os.path.join(BASE_DIR, "static")
